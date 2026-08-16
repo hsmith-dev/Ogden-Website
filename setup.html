@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ogden — Setup Guide</title>
+<meta name="description" content="How to install, configure, and run your own Ogden instance: prerequisites, first login, connecting an AI provider, and building your first crew.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%230B0E14%22/><rect x=%2226%22 y=%2246%22 width=%2248%22 height=%228%22 rx=%224%22 fill=%22%23F5A623%22/><rect x=%2226%22 y=%2230%22 width=%2230%22 height=%228%22 rx=%224%22 fill=%22%23F5A623%22 opacity=%220.55%22/><rect x=%2226%22 y=%2262%22 width=%2238%22 height=%228%22 rx=%224%22 fill=%22%23F5A623%22 opacity=%220.55%22/></svg>">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="scanline" aria-hidden="true"></div>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="wordmark" href="index.html">
+      <span class="wordmark-mark">OG</span><span class="wordmark-text">Ogden</span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="index.html#modules">Modules</a>
+      <a href="index.html#deploy">Deployment</a>
+      <a href="index.html#pricing">Pricing</a>
+      <a href="setup.html">Setup Guide</a>
+    </nav>
+    <div class="header-cta">
+      <a class="btn btn-primary btn-small" href="index.html#pricing">Get Ogden</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <div class="wrap doc-header">
+    <p class="eyebrow">SETUP GUIDE</p>
+    <h1>Get your crew running.</h1>
+    <p class="doc-updated">From a fresh license to a working backlog, in about ten minutes.</p>
+    <nav class="doc-toc" aria-label="On this page">
+      <a href="#prereqs">Prerequisites</a>
+      <a href="#start">Start it up</a>
+      <a href="#login">First login</a>
+      <a href="#provider">Connect an AI provider</a>
+      <a href="#team">Build your team</a>
+      <a href="#backlog">Load the backlog</a>
+      <a href="#watch">Watch it work</a>
+      <a href="#business">Business tier</a>
+      <a href="#extras">The rest of Configure</a>
+      <a href="#help">Getting help</a>
+    </nav>
+  </div>
+
+  <div class="wrap doc-body">
+    <div class="steps">
+
+      <div class="step" id="prereqs">
+        <span class="step-index">1</span>
+        <div>
+          <h3>Prerequisites</h3>
+          <p>
+            <a href="https://docs.docker.com/get-docker/">Docker</a> and Docker Compose, installed
+            and running — that's genuinely the only thing your machine needs. There's no separate
+            Node, Python, or database install; everything runs inside containers.
+          </p>
+          <p>
+            You'll also need your license: accept the private GitHub repository invite you received
+            after checkout (check your email, including spam — GitHub sends this, not us), then clone
+            it:
+          </p>
+          <div class="code-block"><code><span class="cmt"># from wherever you keep your projects</span>
+git clone https://github.com/&lt;your-invited-repo&gt;.git
+cd &lt;your-invited-repo&gt;</code></div>
+        </div>
+      </div>
+
+      <div class="step" id="start">
+        <span class="step-index">2</span>
+        <div>
+          <h3>Configure your environment, then start it up</h3>
+          <p>
+            Copy the example environment file. You can leave it entirely blank for now — every
+            setting it covers (AI provider keys, admin credentials, encryption keys) can also be set
+            later from inside the app or is generated automatically on first boot.
+          </p>
+          <div class="code-block"><code>cp .env.example .env
+docker compose up --build</code></div>
+          <p>
+            First boot pulls base images and builds the app, so give it a minute or two. Once it
+            settles, the frontend is at <strong>http://localhost:8501</strong> and the backend API at
+            <strong>http://localhost:8000</strong>.
+          </p>
+        </div>
+      </div>
+
+      <div class="step" id="login">
+        <span class="step-index">3</span>
+        <div>
+          <h3>Sign in</h3>
+          <p>
+            Ogden creates one organization and one owner login the first time it boots. If you set
+            <code>OGDEN_ADMIN_EMAIL</code>/<code>OGDEN_ADMIN_PASSWORD</code> in <code>.env</code>
+            before that first boot, those are your credentials. Otherwise, a random password is
+            generated and printed <strong>once</strong> to the backend's logs:
+          </p>
+          <div class="code-block"><code>docker compose logs backend</code></div>
+          <p>Write it down — it isn't shown again. You can change it from the sidebar any time.</p>
+        </div>
+      </div>
+
+      <div class="step" id="provider">
+        <span class="step-index">4</span>
+        <div>
+          <h3>Connect an AI provider</h3>
+          <p>
+            Ogden doesn't come with an AI included, and it doesn't ship any API keys or credits of
+            its own — it's the crew's workspace, not the crew's brain. You bring the model. On the
+            <strong>Providers</strong> page, add a connection to whichever you'd like: OpenAI,
+            Anthropic, Google Gemini, a self-hosted Ollama instance, or any OpenAI-compatible
+            endpoint. Different personas in the same project can each use a different one.
+          </p>
+          <div class="doc-callout">
+            <p>
+              Prefer to keep everything fully local? Point a connection at an Ollama instance and
+              nothing about your prompts, code, or output ever leaves your own infrastructure.
+              Every other option sends data to that provider directly from your Ogden instance under
+              that provider's own terms — see the <a href="privacy.html">Privacy Policy</a> for more
+              on this.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="step" id="team">
+        <span class="step-index">5</span>
+        <div>
+          <h3>Build your team</h3>
+          <p>
+            On <strong>Team Builder</strong>, create a project — start from the default 7-agent
+            template (a Product Manager, a couple of engineers, QA, DevOps, and an Executor that
+            actually runs tools) or build your roster from scratch. Every persona is yours to tune:
+            display name, avatar, system prompt, which connection and model it uses, temperature,
+            budget cap, and which sandboxed tool groups it can call.
+          </p>
+        </div>
+      </div>
+
+      <div class="step" id="backlog">
+        <span class="step-index">6</span>
+        <div>
+          <h3>Load the backlog</h3>
+          <p>
+            On the <strong>Board</strong>, add a task and assign it to a persona. Flip the project to
+            <strong>Autonomous</strong> and it gets picked up and worked on its own, or leave it
+            manual and click <strong>Run now</strong> whenever you want to drive it yourself. Turn on
+            <strong>Require approval</strong> and every run lands on its own branch for you to review
+            before it merges.
+          </p>
+        </div>
+      </div>
+
+      <div class="step" id="watch">
+        <span class="step-index">7</span>
+        <div>
+          <h3>Watch it work</h3>
+          <p>
+            <strong>Team Chat</strong> talks to the whole crew at once; <strong>Agents</strong> pulls
+            one persona aside 1:1 and shows their task/run history. <strong>Code</strong> shows real
+            commit history, diffs, and a branch review view — no need to check anything out locally
+            just to see what changed. <strong>Memory</strong> is the crew's long-term recall: search,
+            add notes by hand, or let it capture task outcomes automatically.
+          </p>
+        </div>
+      </div>
+
+      <div class="step" id="business">
+        <span class="step-index">8</span>
+        <div>
+          <h3>Running the Business tier</h3>
+          <p>
+            Same codebase, same image — <code>DEPLOYMENT_TIER</code> just turns on real multi-user
+            accounts, role-based access, and Postgres instead of SQLite for concurrent writes. Set
+            <code>POSTGRES_PASSWORD</code> in <code>.env</code> first, then layer the Business compose
+            file on top of the base one:
+          </p>
+          <div class="code-block"><code>docker compose -f docker-compose.yml -f docker-compose.business.yml up --build</code></div>
+          <p>
+            Once you're signed in, the <strong>Team</strong> page lets an Admin or Owner add members
+            and set their role — Viewer (read-only), Member (works within projects), Admin (manages
+            projects, connections, and other members), or Owner (all of that, plus managing other
+            Owners).
+          </p>
+        </div>
+      </div>
+
+      <div class="step" id="extras">
+        <span class="step-index">9</span>
+        <div>
+          <h3>The rest of Configure</h3>
+          <p>
+            A few more pages worth knowing about, all optional: <strong>MCP Servers</strong> lets a
+            persona discover and call tools from any Model Context Protocol server you register.
+            <strong>Notifications</strong> sends an alert (webhook, Slack, Discord, or email) when a
+            budget's hit, a task's blocked, or a run fails. <strong>Settings</strong> covers
+            branding (handy if you're running more than one instance), the autonomy concurrency
+            limit, and — once you've connected a provider that supports it — semantic memory search
+            and cache routing.
+          </p>
+        </div>
+      </div>
+
+      <div class="step" id="help">
+        <span class="step-index">10</span>
+        <div>
+          <h3>Getting help</h3>
+          <p>
+            Your license includes a year of updates and support from the date of purchase — see the
+            <a href="terms.html">Terms &amp; Conditions</a> for the full renewal terms. Questions
+            about setup, deployment, or your license: <strong>hello@harrisonsmith.ai</strong>.
+          </p>
+          <p>
+            Deploying somewhere other than your own machine? Set <code>CORS_ALLOWED_ORIGINS</code>
+            in <code>.env</code> to the real origin your frontend will be served from — see the
+            comment above it in <code>.env.example</code> for the exact format.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <a class="wordmark wordmark-small" href="index.html">
+      <span class="wordmark-mark">OG</span><span class="wordmark-text">Ogden</span>
+    </a>
+    <nav class="footer-links" aria-label="Legal">
+      <a class="link-muted" href="setup.html">Setup Guide</a>
+      <a class="link-muted" href="privacy.html">Privacy Policy</a>
+      <a class="link-muted" href="terms.html">Terms &amp; Conditions</a>
+    </nav>
+    <p class="footer-note">Built by HarrisonSmith.AI</p>
+    <a class="link-muted" href="mailto:hello@harrisonsmith.ai">hello@harrisonsmith.ai</a>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ogden — Privacy Policy</title>
+<meta name="description" content="What data this site and the Ogden software collect -- and, for the self-hosted app itself, what we deliberately never see.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%230B0E14%22/><rect x=%2226%22 y=%2246%22 width=%2248%22 height=%228%22 rx=%224%22 fill=%22%23F5A623%22/><rect x=%2226%22 y=%2230%22 width=%2230%22 height=%228%22 rx=%224%22 fill=%22%23F5A623%22 opacity=%220.55%22/><rect x=%2226%22 y=%2262%22 width=%2238%22 height=%228%22 rx=%224%22 fill=%22%23F5A623%22 opacity=%220.55%22/></svg>">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="scanline" aria-hidden="true"></div>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="wordmark" href="index.html">
+      <span class="wordmark-mark">OG</span><span class="wordmark-text">Ogden</span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="index.html#modules">Modules</a>
+      <a href="index.html#deploy">Deployment</a>
+      <a href="index.html#pricing">Pricing</a>
+      <a href="setup.html">Setup Guide</a>
+    </nav>
+    <div class="header-cta">
+      <a class="btn btn-primary btn-small" href="index.html#pricing">Get Ogden</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <div class="wrap doc-header">
+    <p class="eyebrow">PRIVACY POLICY</p>
+    <h1>Privacy Policy</h1>
+    <p class="doc-updated">Draft — last updated August 16, 2026</p>
+    <nav class="doc-toc" aria-label="On this page">
+      <a href="#overview">Overview</a>
+      <a href="#website">This website</a>
+      <a href="#purchases">Purchases</a>
+      <a href="#software">The Ogden software</a>
+      <a href="#ai-providers">Third-party AI providers</a>
+      <a href="#correspondence">Direct correspondence</a>
+      <a href="#children">Children's privacy</a>
+      <a href="#changes">Changes to this policy</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+
+  <div class="wrap doc-body">
+
+    <div class="doc-callout">
+      <p>
+        <strong>This is a draft, not a substitute for legal advice.</strong> It describes, honestly
+        and in plain language, what data actually moves where when you use this site or the Ogden
+        software. It has not been reviewed by a lawyer, and it may not, on its own, satisfy every
+        obligation that applies to you or your organization under laws like GDPR or CCPA depending
+        on where you and your customers are. Have it reviewed before relying on it.
+      </p>
+    </div>
+
+    <h2 id="overview">Overview</h2>
+    <p>
+      There are two very different things "privacy" can mean here, and this policy covers both
+      separately: (1) this marketing website, which is what most privacy policies are written
+      about, and (2) the Ogden software itself, which — because it's self-hosted — works
+      differently from almost anything else you'll read a privacy policy for. Read the
+      <a href="#software">Ogden software</a> section below; it's the part that actually matters
+      once you've bought a license.
+    </p>
+
+    <h2 id="website">This website</h2>
+    <p>
+      This site (the pages you're reading now) doesn't use cookies, doesn't run any third-party
+      analytics or tracking script, and doesn't build a profile of you. If you just browse it, we
+      don't collect anything at all beyond what any web server incidentally logs (IP address,
+      requested page, timestamp) for basic operation and abuse prevention, and even that isn't
+      tied to an identity.
+    </p>
+
+    <h2 id="purchases">Purchases</h2>
+    <p>
+      Buying a license is handled entirely by <strong>Stripe</strong> — we never see or store your
+      payment card details. Stripe collects what it needs to process the purchase (billing
+      information, email, and — for the self-host license — the GitHub username you provide, which
+      we use once to invite you to the private release repository) under
+      <a href="https://stripe.com/privacy">Stripe's own privacy policy</a>. We keep the resulting
+      purchase record (who bought what, when) the way any business keeps sales/invoicing records.
+    </p>
+
+    <h2 id="software">The Ogden software</h2>
+    <p>
+      Once you've deployed Ogden, it runs entirely on infrastructure you control — your own
+      machine, your own server, your own cloud account. <strong>We do not operate any part of a
+      self-hosted Ogden instance, and the software itself contains no telemetry, analytics, or
+      "phone home" mechanism of any kind.</strong> We don't receive your projects, your backlog,
+      your agents' conversations, your code, or any usage statistics from your instance — not
+      because we've promised not to look, but because there's genuinely no code path in the
+      application that sends any of it anywhere. The only data your Ogden instance ever sends
+      outside itself is what you explicitly configure it to send to an AI provider — see the next
+      section.
+    </p>
+
+    <h2 id="ai-providers">Third-party AI providers</h2>
+    <p>
+      Ogden is designed to connect to AI — that's the whole point of it — but it doesn't include
+      any AI or LLM service itself, and it doesn't ship with any provider's API key. You configure
+      your own connection, to whichever provider you choose (OpenAI, Anthropic, Google Gemini, a
+      self-hosted Ollama instance, or any OpenAI-compatible endpoint), on the Providers page.
+    </p>
+    <p>
+      Once configured, prompts, code, and conversation content from your Ogden instance are sent
+      directly from your own infrastructure to that provider — not through us, not visible to us.
+      That data is then handled entirely under <strong>that provider's own privacy policy and data
+      usage terms</strong>, including whatever their policy says about retention or use for model
+      training. We strongly recommend reviewing the privacy/data policy of whichever provider you
+      connect, particularly if you're sending proprietary or sensitive code, before you do.
+    </p>
+    <div class="doc-callout">
+      <p>
+        The one configuration where nothing leaves your infrastructure at all: connect Ogden to a
+        <strong>self-hosted Ollama</strong> instance instead of a cloud provider. Every prompt and
+        every response then stays entirely on hardware you control.
+      </p>
+    </div>
+
+    <h2 id="correspondence">Direct correspondence</h2>
+    <p>
+      If you email <strong>hello@harrisonsmith.ai</strong>, we keep that correspondence to respond
+      to you and for our own records — the same way any business would. We don't sell, rent, or
+      share it with third parties for marketing purposes.
+    </p>
+
+    <h2 id="children">Children's privacy</h2>
+    <p>
+      This site and the Ogden software are intended for business and professional use and are not
+      directed at children. We don't knowingly collect information from anyone under 13.
+    </p>
+
+    <h2 id="changes">Changes to this policy</h2>
+    <p>
+      If this policy changes in a way that matters, we'll update the date at the top of this page.
+      Continued use of the site or the software after a change means you accept the update.
+    </p>
+
+    <h2 id="contact">Contact</h2>
+    <p>
+      Questions about this policy, or a request regarding your own data: <strong>hello@harrisonsmith.ai</strong>.
+    </p>
+
+    <div class="doc-cross-links">
+      <a class="btn btn-ghost btn-small" href="terms.html">Terms &amp; Conditions</a>
+      <a class="btn btn-ghost btn-small" href="setup.html">Setup Guide</a>
+    </div>
+
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <a class="wordmark wordmark-small" href="index.html">
+      <span class="wordmark-mark">OG</span><span class="wordmark-text">Ogden</span>
+    </a>
+    <nav class="footer-links" aria-label="Legal">
+      <a class="link-muted" href="setup.html">Setup Guide</a>
+      <a class="link-muted" href="privacy.html">Privacy Policy</a>
+      <a class="link-muted" href="terms.html">Terms &amp; Conditions</a>
+    </nav>
+    <p class="footer-note">Built by HarrisonSmith.AI</p>
+    <a class="link-muted" href="mailto:hello@harrisonsmith.ai">hello@harrisonsmith.ai</a>
+  </div>
+</footer>
+
+</body>
+</html>

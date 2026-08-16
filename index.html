@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ogden — Your Autonomous Software Crew</title>
+<meta name="description" content="Ogden assembles AI personas into a real software team — a backlog, a roster, and full autonomy. Self-hosted, on your own infrastructure.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%230B0E14%22/><rect x=%2226%22 y=%2246%22 width=%2248%22 height=%228%22 rx=%224%22 fill=%22%23F5A623%22/><rect x=%2226%22 y=%2230%22 width=%2230%22 height=%228%22 rx=%224%22 fill=%22%23F5A623%22 opacity=%220.55%22/><rect x=%2226%22 y=%2262%22 width=%2238%22 height=%228%22 rx=%224%22 fill=%22%23F5A623%22 opacity=%220.55%22/></svg>">
+<!-- Fonts are inlined as base64 @font-face data URIs in styles.css --
+     no external request, works offline, renders identically everywhere
+     (including a strict-CSP preview sandbox that would otherwise block
+     a Google Fonts request and silently fall back to a system font). -->
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="scanline" aria-hidden="true"></div>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="wordmark" href="#top">
+      <span class="wordmark-mark">OG</span><span class="wordmark-text">Ogden</span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#modules">Modules</a>
+      <a href="#deploy">Deployment</a>
+      <a href="#pricing">Pricing</a>
+      <a href="setup.html">Setup Guide</a>
+    </nav>
+    <div class="header-cta">
+      <a class="btn btn-primary btn-small" href="#pricing">Get Ogden</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow">AUTONOMOUS SOFTWARE TEAM · SELF-HOSTED</p>
+        <h1>You bring the backlog.<br>Ogden brings the <span class="accent">crew.</span></h1>
+        <p class="hero-sub">
+          Ogden assembles AI personas — a PM, engineers, a QA lead, whoever you need —
+          into a real working team with a Kanban backlog, its own sandboxed workspace,
+          and the autonomy to actually ship. Full source and deployment files, running
+          on your own hardware.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#pricing">See pricing</a>
+          <a class="btn btn-ghost" href="#modules">What it does</a>
+        </div>
+        <p class="hero-fineprint">Multi-provider — OpenAI, Anthropic, Gemini, or fully local via Ollama.</p>
+      </div>
+
+      <div class="hero-panel" aria-hidden="true">
+        <div class="panel-head">
+          <span class="panel-title">CREW MANIFEST</span>
+          <span class="panel-tag">DEFAULT TEAM</span>
+        </div>
+        <ul class="roster">
+          <li><span class="dot dot-on"></span><span class="role">product_manager</span><span class="stat">writing spec</span></li>
+          <li><span class="dot dot-on"></span><span class="role">backend_engineer</span><span class="stat">running tests</span></li>
+          <li><span class="dot dot-on"></span><span class="role">frontend_engineer</span><span class="stat">in review</span></li>
+          <li><span class="dot dot-idle"></span><span class="role">qa_engineer</span><span class="stat">queued</span></li>
+          <li><span class="dot dot-on"></span><span class="role">devops</span><span class="stat">deploying</span></li>
+        </ul>
+        <div class="panel-foot">
+          <span>5 personas · 1 backlog</span>
+          <span class="blink">● live</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MODULES ============ -->
+  <section class="modules" id="modules">
+    <div class="wrap">
+      <p class="eyebrow center" data-reveal>WHAT'S ON BOARD</p>
+      <h2 class="section-title center" data-reveal>Six modules. One shared codebase.</h2>
+
+      <div class="module-grid">
+        <article class="module" data-reveal style="--i:0">
+          <span class="module-index">01</span>
+          <h3>Autonomous Backlog</h3>
+          <p>A real Kanban board per project. Assign a task to a persona, flip the project
+            to autonomous, and watch it move — or click <em>Run now</em> and drive it yourself.</p>
+        </article>
+        <article class="module" data-reveal style="--i:1">
+          <span class="module-index">02</span>
+          <h3>A Full AI Crew</h3>
+          <p>Every persona is yours to tune — name, avatar, system prompt, model, temperature,
+            tool access. Talk to the whole team at once, or pull one aside 1:1.</p>
+        </article>
+        <article class="module" data-reveal style="--i:2">
+          <span class="module-index">03</span>
+          <h3>Any Model, Anywhere</h3>
+          <p>OpenAI, Anthropic, Gemini, a self-hosted Ollama box, or any OpenAI-compatible
+            endpoint — mixed freely across personas in the same project.</p>
+        </article>
+        <article class="module" data-reveal style="--i:3">
+          <span class="module-index">04</span>
+          <h3>Human-in-the-Loop</h3>
+          <p>Turn on approval gates and every run lands on its own branch. Review the real
+            diff, then approve &amp; merge or reject with feedback that flows into the retry.</p>
+        </article>
+        <article class="module" data-reveal style="--i:4">
+          <span class="module-index">05</span>
+          <h3>Full Audit Trail</h3>
+          <p>Per-call token and cost tracking, budget caps that actually stop runaway spend,
+            run history, and a live activity log for every task.</p>
+        </article>
+        <article class="module" data-reveal style="--i:5">
+          <span class="module-index">06</span>
+          <h3>Sandboxed &amp; Governed</h3>
+          <p>Every project gets its own isolated git workspace. Role-based access, org-level
+            tenant isolation, and non-root containers by default.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DEPLOYMENT ============ -->
+  <section class="deploy" id="deploy">
+    <div class="wrap">
+      <p class="eyebrow center" data-reveal>ONE CODEBASE, TWO WAYS TO RUN IT</p>
+      <h2 class="section-title center" data-reveal>Deploy it your way.</h2>
+      <p class="section-sub center" data-reveal>
+        Solo and Business aren't different products — they're the same codebase,
+        tiered by configuration. Move between them without a rewrite.
+      </p>
+
+      <div class="tier-grid">
+        <div class="tier-card" data-reveal style="--i:0">
+          <span class="tier-kicker">SOLO</span>
+          <h3>One person, one box</h3>
+          <p>Self-hosted, single-user, zero extra infrastructure. Docker Compose and you're
+            running in minutes.</p>
+        </div>
+        <div class="tier-card tier-card-featured" data-reveal style="--i:1">
+          <span class="tier-kicker">BUSINESS</span>
+          <h3>Self-hosted, your infra</h3>
+          <p>Real multi-user accounts, role-based access, Postgres instead of SQLite —
+            running entirely on hardware you control.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PRICING ============ -->
+  <section class="pricing" id="pricing">
+    <div class="wrap">
+      <p class="eyebrow center" data-reveal>PRICING</p>
+      <h2 class="section-title center" data-reveal>Own it outright.</h2>
+      <p class="section-sub center" data-reveal>
+        A one-time license gets you the full source and deployment files — yours to run,
+        forever, on infrastructure you control.
+      </p>
+
+      <h3 class="pricing-group-title">Self-Host License <span class="pricing-group-note">one-time payment · yours forever · 1 year of updates &amp; support included · you'll be asked for your GitHub username at checkout</span></h3>
+      <div class="price-grid">
+
+        <div class="price-card" data-reveal style="--i:0">
+          <h4>Single User</h4>
+          <p class="price"><span class="price-currency">$</span>500</p>
+          <p class="price-desc">For one builder running Ogden on their own box.</p>
+          <ul class="price-features">
+            <li>1 user</li>
+            <li>Full source + hosting files</li>
+            <li>Private repo invite</li>
+            <li>Solo-tier deployment</li>
+          </ul>
+          <a class="btn btn-primary btn-block" href="https://buy.stripe.com/28EdR87nOfoMfGg0Gof3a00">Buy license</a>
+        </div>
+
+        <div class="price-card" data-reveal style="--i:1">
+          <h4>Small Business</h4>
+          <p class="price"><span class="price-currency">$</span>3,000</p>
+          <p class="price-desc">For a small team standing up their own instance.</p>
+          <ul class="price-features">
+            <li>Up to 25 users</li>
+            <li>Everything in Single User</li>
+            <li>Business-tier: multi-user, RBAC</li>
+            <li>Email support</li>
+          </ul>
+          <a class="btn btn-primary btn-block" href="https://buy.stripe.com/8x28wO23ub8wdy81Ksf3a01">Buy license</a>
+        </div>
+
+        <div class="price-card price-card-featured" data-reveal style="--i:2">
+          <span class="price-badge">MOST COMMON</span>
+          <h4>Large Business</h4>
+          <p class="price"><span class="price-currency">$</span>10,000</p>
+          <p class="price-desc">For a growing engineering org running Ogden at scale.</p>
+          <ul class="price-features">
+            <li>Up to 1,100 users</li>
+            <li>Everything in Small Business</li>
+            <li>Postgres deployment guidance</li>
+            <li>Priority email support</li>
+          </ul>
+          <a class="btn btn-primary btn-block" href="https://buy.stripe.com/fZucN48rS2C00Lmbl2f3a02">Buy license</a>
+        </div>
+
+        <div class="price-card" data-reveal style="--i:3">
+          <h4>Enterprise</h4>
+          <p class="price"><span class="price-currency">$</span>25,000</p>
+          <p class="price-desc">Dedicated support for a custom deployment.</p>
+          <ul class="price-features">
+            <li>Unlimited users</li>
+            <li>Everything in Large Business</li>
+            <li>Dedicated onboarding call</li>
+            <li>Direct line to the team</li>
+          </ul>
+          <a class="btn btn-primary btn-block" href="https://buy.stripe.com/9B6fZgcI82C065G1Ksf3a03">Buy license</a>
+        </div>
+
+      </div>
+      <p class="pricing-footnote">
+        Own the code forever — the license never expires. The purchase price covers your first
+        year of new releases and support; after that, renew for 30% of your license price per
+        year to keep receiving them. Don't renew, and nothing breaks — the version you have
+        keeps running exactly as it does today.
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <a class="wordmark wordmark-small" href="#top">
+      <span class="wordmark-mark">OG</span><span class="wordmark-text">Ogden</span>
+    </a>
+    <nav class="footer-links" aria-label="Legal">
+      <a class="link-muted" href="setup.html">Setup Guide</a>
+      <a class="link-muted" href="privacy.html">Privacy Policy</a>
+      <a class="link-muted" href="terms.html">Terms &amp; Conditions</a>
+    </nav>
+    <p class="footer-note">Built by HarrisonSmith.AI</p>
+    <a class="link-muted" href="mailto:hello@harrisonsmith.ai">hello@harrisonsmith.ai</a>
+  </div>
+</footer>
+
+<script>
+  // Reveals [data-reveal] elements as they scroll into view. No effect at
+  // all under prefers-reduced-motion (styles.css keeps them fully opaque
+  // in that case, so this observer just has nothing to toggle).
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('[data-reveal]').forEach(function (el) { observer.observe(el); });
+  } else {
+    document.querySelectorAll('[data-reveal]').forEach(function (el) { el.classList.add('is-visible'); });
+  }
+</script>
+</body>
+</html>
