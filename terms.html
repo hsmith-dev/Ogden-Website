@@ -4,37 +4,43 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ogden — Terms &amp; Conditions</title>
-<meta name="description" content="Terms for this website and for your Ogden license, including how it's built with AI assistance and how you connect your own AI provider.">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%230B0E14%22/><rect x=%2226%22 y=%2246%22 width=%2248%22 height=%228%22 rx=%224%22 fill=%22%23F5A623%22/><rect x=%2226%22 y=%2230%22 width=%2230%22 height=%228%22 rx=%224%22 fill=%22%23F5A623%22 opacity=%220.55%22/><rect x=%2226%22 y=%2262%22 width=%2238%22 height=%228%22 rx=%224%22 fill=%22%23F5A623%22 opacity=%220.55%22/></svg>">
+<meta name="description" content="Terms for this website and for your use of Ogden, including how it's built with AI assistance and how you connect your own AI provider.">
+<meta name="theme-color" content="#0b0d12">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/Geist.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="styles.css">
+<script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
-
-<div class="scanline" aria-hidden="true"></div>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="grain" aria-hidden="true"></div>
 
 <header class="site-header">
   <div class="wrap header-inner">
-    <a class="wordmark" href="index.html">
+    <a class="wordmark" href="./" aria-label="Ogden home">
       <span class="wordmark-mark">OG</span><span class="wordmark-text">Ogden</span>
     </a>
     <nav class="nav" aria-label="Primary">
-      <a href="index.html#modules">Modules</a>
-      <a href="index.html#deploy">Deployment</a>
-      <a href="index.html#pricing">Pricing</a>
-      <a href="setup.html">Setup Guide</a>
+      <a href="./#features">Features</a>
+      <a href="./#deploy">Deploy</a>
+      <a href="./#license">License</a>
+      <a href="setup.html">Setup guide</a>
     </nav>
     <div class="header-cta">
-      <a class="btn btn-primary btn-small" href="index.html#pricing">Get Ogden</a>
+      <a class="btn btn-primary btn-small" href="./#license">Get Ogden</a>
     </div>
   </div>
 </header>
 
-<main id="top">
+<main id="main">
 
   <div class="wrap doc-header">
-    <p class="eyebrow">TERMS &amp; CONDITIONS</p>
+    <p class="eyebrow">Terms &amp; Conditions</p>
     <h1>Terms &amp; Conditions</h1>
     <p class="doc-updated">Draft — last updated August 16, 2026</p>
+  </div>
+
+  <div class="wrap doc-layout">
     <nav class="doc-toc" aria-label="On this page">
       <a href="#acceptance">Acceptance</a>
       <a href="#ai-built">Built with AI assistance</a>
@@ -49,9 +55,8 @@
       <a href="#changes">Changes to these terms</a>
       <a href="#contact">Contact</a>
     </nav>
-  </div>
 
-  <div class="wrap doc-body">
+    <div class="doc-body">
 
     <div class="doc-callout">
       <p>
@@ -62,9 +67,8 @@
 
     <h2 id="acceptance">Acceptance</h2>
     <p>
-      By using this website or purchasing an Ogden license, you agree to these terms and to the
-      <a href="privacy.html">Privacy Policy</a>. If you don't agree, don't use the site or
-      purchase a license.
+      By using this website, using Ogden, or purchasing an Ogden license, you agree to these terms and to the
+      <a href="privacy.html">Privacy Policy</a>. If you don't agree, don't use the site or the software.
     </p>
 
     <h2 id="ai-built">Built with AI assistance</h2>
@@ -106,17 +110,26 @@
 
     <h2 id="license">Your license</h2>
     <p>
-      Purchasing self-host access grants you a license under the terms in <code>LICENSE.txt</code>,
-      included in the private repository you're invited to after checkout — that file is the
-      authoritative license text. In short: the license itself never expires and covers up to the
-      user count of the tier you bought; your purchase includes 12 months of new releases and
-      support, renewable afterward at 30% of your original price; declining to renew doesn't take
-      away the version you already have.
+      <strong>Individuals.</strong> If you're using Ogden for yourself (personal, single-user use that
+      isn't on behalf of a company or other organization), it's free. You get the same codebase through
+      an invite to the release repository, and the no-redistribution and no-competing-service terms
+      below still apply.
+    </p>
+    <p>
+      <strong>Organizations.</strong> A company or other organization running Ogden for its own
+      internal use needs a paid self-host license under the terms in <code>LICENSE.txt</code>, which is
+      included in the release repository and is the authoritative license text. In short, the license
+      covers internal use on infrastructure the organization controls, up to the user count of the
+      tier purchased (Small Business: up to 25 / Large Business: up to 1,100 / Enterprise: unlimited).
+      The version delivered is the organization's to keep and run indefinitely. The purchase includes 12 months
+      of new releases and support, renewable afterward at 30% of the original license price, and
+      declining to renew doesn't take away the version already delivered. Repository access may be
+      paused once support lapses, so keep your own clone.
     </p>
 
     <h2 id="refunds">Refunds</h2>
     <p>
-      Because a self-host purchase grants immediate access to the source code and a private
+      For organization licenses: because a purchase grants immediate access to the source code and a private
       repository invite — access that, once used, can't meaningfully be "returned" — <strong>all
       sales are final</strong> once that access has been granted, except where a refund is required
       by law. If something's genuinely wrong on our end (a duplicate charge, access never granted,
@@ -169,25 +182,26 @@
       <a class="btn btn-ghost btn-small" href="privacy.html">Privacy Policy</a>
       <a class="btn btn-ghost btn-small" href="setup.html">Setup Guide</a>
     </div>
-
+    </div>
   </div>
 
 </main>
 
 <footer class="site-footer">
   <div class="wrap footer-inner">
-    <a class="wordmark wordmark-small" href="index.html">
+    <a class="wordmark wordmark-small" href="./">
       <span class="wordmark-mark">OG</span><span class="wordmark-text">Ogden</span>
     </a>
-    <nav class="footer-links" aria-label="Legal">
-      <a class="link-muted" href="setup.html">Setup Guide</a>
-      <a class="link-muted" href="privacy.html">Privacy Policy</a>
-      <a class="link-muted" href="terms.html">Terms &amp; Conditions</a>
+    <nav class="footer-links" aria-label="Footer">
+      <a class="link-muted" href="setup.html">Setup guide</a>
+      <a class="link-muted" href="privacy.html">Privacy</a>
+      <a class="link-muted" href="terms.html">Terms</a>
+      <a class="link-muted" href="mailto:hello@harrisonsmith.ai">hello@harrisonsmith.ai</a>
     </nav>
-    <p class="footer-note">Built by HarrisonSmith.AI</p>
-    <a class="link-muted" href="mailto:hello@harrisonsmith.ai">hello@harrisonsmith.ai</a>
+    <p class="footer-note"><span>Built by HarrisonSmith.AI</span><span>No cookies. No trackers.</span></p>
   </div>
 </footer>
 
+<script src="site.js" defer></script>
 </body>
 </html>

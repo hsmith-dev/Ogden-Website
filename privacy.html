@@ -4,41 +4,47 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ogden — Privacy Policy</title>
-<meta name="description" content="What data this site and the Ogden software collect -- and, for the self-hosted app itself, what we deliberately never see.">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%230B0E14%22/><rect x=%2226%22 y=%2246%22 width=%2248%22 height=%228%22 rx=%224%22 fill=%22%23F5A623%22/><rect x=%2226%22 y=%2230%22 width=%2230%22 height=%228%22 rx=%224%22 fill=%22%23F5A623%22 opacity=%220.55%22/><rect x=%2226%22 y=%2262%22 width=%2238%22 height=%228%22 rx=%224%22 fill=%22%23F5A623%22 opacity=%220.55%22/></svg>">
+<meta name="description" content="What data this site and the Ogden software collect — and, for the self-hosted app itself, what we deliberately never see.">
+<meta name="theme-color" content="#0b0d12">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/Geist.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="styles.css">
+<script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
-
-<div class="scanline" aria-hidden="true"></div>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="grain" aria-hidden="true"></div>
 
 <header class="site-header">
   <div class="wrap header-inner">
-    <a class="wordmark" href="index.html">
+    <a class="wordmark" href="./" aria-label="Ogden home">
       <span class="wordmark-mark">OG</span><span class="wordmark-text">Ogden</span>
     </a>
     <nav class="nav" aria-label="Primary">
-      <a href="index.html#modules">Modules</a>
-      <a href="index.html#deploy">Deployment</a>
-      <a href="index.html#pricing">Pricing</a>
-      <a href="setup.html">Setup Guide</a>
+      <a href="./#features">Features</a>
+      <a href="./#deploy">Deploy</a>
+      <a href="./#license">License</a>
+      <a href="setup.html">Setup guide</a>
     </nav>
     <div class="header-cta">
-      <a class="btn btn-primary btn-small" href="index.html#pricing">Get Ogden</a>
+      <a class="btn btn-primary btn-small" href="./#license">Get Ogden</a>
     </div>
   </div>
 </header>
 
-<main id="top">
+<main id="main">
 
   <div class="wrap doc-header">
-    <p class="eyebrow">PRIVACY POLICY</p>
+    <p class="eyebrow">Privacy policy</p>
     <h1>Privacy Policy</h1>
     <p class="doc-updated">Draft — last updated August 16, 2026</p>
+  </div>
+
+  <div class="wrap doc-layout">
     <nav class="doc-toc" aria-label="On this page">
       <a href="#overview">Overview</a>
       <a href="#website">This website</a>
-      <a href="#purchases">Purchases</a>
+      <a href="#purchases">Access &amp; purchases</a>
       <a href="#software">The Ogden software</a>
       <a href="#ai-providers">Third-party AI providers</a>
       <a href="#correspondence">Direct correspondence</a>
@@ -46,9 +52,8 @@
       <a href="#changes">Changes to this policy</a>
       <a href="#contact">Contact</a>
     </nav>
-  </div>
 
-  <div class="wrap doc-body">
+    <div class="doc-body">
 
     <div class="doc-callout">
       <p>
@@ -67,7 +72,7 @@
       about, and (2) the Ogden software itself, which — because it's self-hosted — works
       differently from almost anything else you'll read a privacy policy for. Read the
       <a href="#software">Ogden software</a> section below; it's the part that actually matters
-      once you've bought a license.
+      once you're running it.
     </p>
 
     <h2 id="website">This website</h2>
@@ -79,14 +84,19 @@
       tied to an identity.
     </p>
 
-    <h2 id="purchases">Purchases</h2>
+    <h2 id="purchases">Access requests and purchases</h2>
     <p>
-      Buying a license is handled entirely by <strong>Stripe</strong> — we never see or store your
-      payment card details. Stripe collects what it needs to process the purchase (billing
-      information, email, and — for the self-host license — the GitHub username you provide, which
-      we use once to invite you to the private release repository) under
-      <a href="https://stripe.com/privacy">Stripe's own privacy policy</a>. We keep the resulting
-      purchase record (who bought what, when) the way any business keeps sales/invoicing records.
+      <strong>Individuals</strong> request free access by emailing us their GitHub username. We use it
+      to invite them to the release repository and keep that email the way we keep any other
+      correspondence (see below).
+    </p>
+    <p>
+      <strong>Organization licenses</strong> are purchased through <strong>Stripe</strong>. We never see or
+      store your payment card details. Stripe collects what it needs to process the purchase (billing
+      information, email, and the GitHub username you provide, which we use once to invite you to
+      the release repository) under <a href="https://stripe.com/privacy">Stripe's own privacy policy</a>.
+      We keep the resulting purchase record (who bought what, when) the way any business keeps
+      sales and invoicing records.
     </p>
 
     <h2 id="software">The Ogden software</h2>
@@ -134,7 +144,7 @@
 
     <h2 id="children">Children's privacy</h2>
     <p>
-      This site and the Ogden software are intended for business and professional use and are not
+      This site and the Ogden software are intended for software development use by adults and are not
       directed at children. We don't knowingly collect information from anyone under 13.
     </p>
 
@@ -153,25 +163,26 @@
       <a class="btn btn-ghost btn-small" href="terms.html">Terms &amp; Conditions</a>
       <a class="btn btn-ghost btn-small" href="setup.html">Setup Guide</a>
     </div>
-
+    </div>
   </div>
 
 </main>
 
 <footer class="site-footer">
   <div class="wrap footer-inner">
-    <a class="wordmark wordmark-small" href="index.html">
+    <a class="wordmark wordmark-small" href="./">
       <span class="wordmark-mark">OG</span><span class="wordmark-text">Ogden</span>
     </a>
-    <nav class="footer-links" aria-label="Legal">
-      <a class="link-muted" href="setup.html">Setup Guide</a>
-      <a class="link-muted" href="privacy.html">Privacy Policy</a>
-      <a class="link-muted" href="terms.html">Terms &amp; Conditions</a>
+    <nav class="footer-links" aria-label="Footer">
+      <a class="link-muted" href="setup.html">Setup guide</a>
+      <a class="link-muted" href="privacy.html">Privacy</a>
+      <a class="link-muted" href="terms.html">Terms</a>
+      <a class="link-muted" href="mailto:hello@harrisonsmith.ai">hello@harrisonsmith.ai</a>
     </nav>
-    <p class="footer-note">Built by HarrisonSmith.AI</p>
-    <a class="link-muted" href="mailto:hello@harrisonsmith.ai">hello@harrisonsmith.ai</a>
+    <p class="footer-note"><span>Built by HarrisonSmith.AI</span><span>No cookies. No trackers.</span></p>
   </div>
 </footer>
 
+<script src="site.js" defer></script>
 </body>
 </html>

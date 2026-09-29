@@ -1,40 +1,35 @@
 # Ogden — Marketing Site
 
-The public-facing landing/pricing page for Ogden — deliberately a **separate
-repo from the app itself** (`ogden-aiagents`), since this is a sales surface,
-not the product.
+The public landing page for Ogden. It lives in a **separate repo from the app itself** because it's a sales surface, not the product.
 
-A single self-contained static page: `index.html` + `styles.css`. No build
-step, no framework, no backend — it doesn't need one. Deploy it anywhere that
-serves static files (GitHub Pages, Netlify, Vercel, Cloudflare Pages, an S3
-bucket, or a one-line `nginx` container). Intended domain:
-**ogden.harrisonsmith.ai** (a subdomain of the main `harrisonsmith.ai` site,
-not yet pointed anywhere as of this writing) — whichever static host you
-land on, add a CNAME/ALIAS record for `ogden` pointing at it.
+Plain static files with no build step, framework, or backend. It deploys anywhere that serves static files and is currently on GitHub Pages at **ogden.harrisonsmith.ai** (see `CNAME`).
 
-## Scope: self-host only, for now
+```
+index.html      landing page (features, deployment, licensing)
+setup.html      setup guide
+privacy.html    privacy policy (draft)
+terms.html      terms & conditions (draft)
+404.html        not-found page (GitHub Pages picks this up automatically)
+styles.css      all styles
+site.js         scroll reveals, tile spotlight, doc TOC highlighting
+favicon.svg
+fonts/          Geist + Geist Mono variable fonts (SIL OFL 1.1), self-hosted
+```
 
-This site sells exactly one thing: a one-time self-host license (source +
-deployment files, delivered as a private GitHub repo invite). There is no
-Ogden Cloud / hosted offering here — running a hosted product is a real
-ongoing DevOps and cost commitment that isn't being taken on right now.
-The backend still has the Cloud billing/provisioning code (`billing.py`'s
-`fulfill_cloud_subscription`, the Postgres-backed multi-tenant tier, etc.)
-so nothing was removed there — it's just not being marketed or sold on
-this site until that changes.
+## Licensing model shown on the site
 
-## Before you deploy this for real
+- **Individuals**: free for personal, single-user use. "Request access" is a `mailto:` asking for the
+  person's GitHub username, and we invite them to the release repo by hand.
+- **Organizations**: paid self-host license following `LICENSE.txt` in the release repo
+  (`hsmith-dev/ogden-ai-agent-release`): Small Business (≤25 users), Large Business (≤1,100),
+  Enterprise (unlimited). Includes 12 months of releases/support, with optional renewal at 30% of the price paid.
+  Delivery is by private repo invite.
 
-- **Self-host license "Buy license" buttons** already point at real, live
-  Stripe Payment Links (Single User $500 / Small Business $3,000 / Large
-  Business $10,000 / Enterprise $25,000). If you ever regenerate these in
-  the Stripe dashboard, update the four `href`s in the pricing section.
-- **Favicon** is an inline SVG placeholder (a simple crew-manifest glyph) —
-  swap for a real logo mark whenever you have one.
+The organization "Buy license" buttons point at live Stripe Payment Links. If you regenerate them,
+update the three `href`s in the `#license` section of `index.html`. **Only put prices on the
+organization tiers.** Keep the individual tier free of any cost wording.
 
 ## Local preview
-
-No build tooling needed — just open `index.html` in a browser, or serve it:
 
 ```bash
 python3 -m http.server 8080
@@ -42,8 +37,6 @@ python3 -m http.server 8080
 
 ## Design
 
-Dark, single-theme "command deck / crew manifest" aesthetic (see
-`styles.css`'s header comment for the full rationale) — Archivo for display
-type, Work Sans for body copy, IBM Plex Mono for labels/pricing/data, one
-amber accent. Deliberately not a light/dark toggle: the concept only reads
-correctly against a dark ground.
+Dark-only, with one amber accent and cool-tinted neutrals. Geist for text and Geist Mono for labels and code.
+Fonts are self-hosted so the site makes **no third-party requests**. The privacy policy promises that,
+so don't add Google Fonts, analytics, or CDN scripts without updating `privacy.html`.

@@ -5,36 +5,42 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ogden — Setup Guide</title>
 <meta name="description" content="How to install, configure, and run your own Ogden instance: prerequisites, first login, connecting an AI provider, and building your first crew.">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%230B0E14%22/><rect x=%2226%22 y=%2246%22 width=%2248%22 height=%228%22 rx=%224%22 fill=%22%23F5A623%22/><rect x=%2226%22 y=%2230%22 width=%2230%22 height=%228%22 rx=%224%22 fill=%22%23F5A623%22 opacity=%220.55%22/><rect x=%2226%22 y=%2262%22 width=%2238%22 height=%228%22 rx=%224%22 fill=%22%23F5A623%22 opacity=%220.55%22/></svg>">
+<meta name="theme-color" content="#0b0d12">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/Geist.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="styles.css">
+<script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
-
-<div class="scanline" aria-hidden="true"></div>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="grain" aria-hidden="true"></div>
 
 <header class="site-header">
   <div class="wrap header-inner">
-    <a class="wordmark" href="index.html">
+    <a class="wordmark" href="./" aria-label="Ogden home">
       <span class="wordmark-mark">OG</span><span class="wordmark-text">Ogden</span>
     </a>
     <nav class="nav" aria-label="Primary">
-      <a href="index.html#modules">Modules</a>
-      <a href="index.html#deploy">Deployment</a>
-      <a href="index.html#pricing">Pricing</a>
-      <a href="setup.html">Setup Guide</a>
+      <a href="./#features">Features</a>
+      <a href="./#deploy">Deploy</a>
+      <a href="./#license">License</a>
+      <a href="setup.html" aria-current="page">Setup guide</a>
     </nav>
     <div class="header-cta">
-      <a class="btn btn-primary btn-small" href="index.html#pricing">Get Ogden</a>
+      <a class="btn btn-primary btn-small" href="./#license">Get Ogden</a>
     </div>
   </div>
 </header>
 
-<main id="top">
+<main id="main">
 
   <div class="wrap doc-header">
-    <p class="eyebrow">SETUP GUIDE</p>
+    <p class="eyebrow">Setup guide</p>
     <h1>Get your crew running.</h1>
-    <p class="doc-updated">From a fresh license to a working backlog, in about ten minutes.</p>
+    <p class="doc-updated">From repository invite to a working backlog, in about ten minutes.</p>
+  </div>
+
+  <div class="wrap doc-layout">
     <nav class="doc-toc" aria-label="On this page">
       <a href="#prereqs">Prerequisites</a>
       <a href="#start">Start it up</a>
@@ -47,9 +53,8 @@
       <a href="#extras">The rest of Configure</a>
       <a href="#help">Getting help</a>
     </nav>
-  </div>
 
-  <div class="wrap doc-body">
+    <div class="doc-body">
     <div class="steps">
 
       <div class="step" id="prereqs">
@@ -62,9 +67,9 @@
             Node, Python, or database install; everything runs inside containers.
           </p>
           <p>
-            You'll also need your license: accept the private GitHub repository invite you received
-            after checkout (check your email, including spam — GitHub sends this, not us), then clone
-            it:
+            You'll also need access to the release repository. Accept the private GitHub invite you received
+            after requesting personal access or completing an organization checkout. Check your email, including spam, because GitHub
+            sends the invite, not us. Then clone it:
           </p>
           <div class="code-block"><code><span class="cmt"># from wherever you keep your projects</span>
 git clone https://github.com/&lt;your-invited-repo&gt;.git
@@ -212,9 +217,9 @@ docker compose up --build</code></div>
         <div>
           <h3>Getting help</h3>
           <p>
-            Your license includes a year of updates and support from the date of purchase — see the
+            Organization licenses include a year of updates and support from the date of purchase. See the
             <a href="terms.html">Terms &amp; Conditions</a> for the full renewal terms. Questions
-            about setup, deployment, or your license: <strong>hello@harrisonsmith.ai</strong>.
+            about setup, deployment, or licensing: <strong>hello@harrisonsmith.ai</strong>.
           </p>
           <p>
             Deploying somewhere other than your own machine? Set <code>CORS_ALLOWED_ORIGINS</code>
@@ -225,24 +230,26 @@ docker compose up --build</code></div>
       </div>
 
     </div>
+    </div>
   </div>
 
 </main>
 
 <footer class="site-footer">
   <div class="wrap footer-inner">
-    <a class="wordmark wordmark-small" href="index.html">
+    <a class="wordmark wordmark-small" href="./">
       <span class="wordmark-mark">OG</span><span class="wordmark-text">Ogden</span>
     </a>
-    <nav class="footer-links" aria-label="Legal">
-      <a class="link-muted" href="setup.html">Setup Guide</a>
-      <a class="link-muted" href="privacy.html">Privacy Policy</a>
-      <a class="link-muted" href="terms.html">Terms &amp; Conditions</a>
+    <nav class="footer-links" aria-label="Footer">
+      <a class="link-muted" href="setup.html">Setup guide</a>
+      <a class="link-muted" href="privacy.html">Privacy</a>
+      <a class="link-muted" href="terms.html">Terms</a>
+      <a class="link-muted" href="mailto:hello@harrisonsmith.ai">hello@harrisonsmith.ai</a>
     </nav>
-    <p class="footer-note">Built by HarrisonSmith.AI</p>
-    <a class="link-muted" href="mailto:hello@harrisonsmith.ai">hello@harrisonsmith.ai</a>
+    <p class="footer-note"><span>Built by HarrisonSmith.AI</span><span>No cookies. No trackers.</span></p>
   </div>
 </footer>
 
+<script src="site.js" defer></script>
 </body>
 </html>
