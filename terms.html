@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ogden — Terms &amp; Conditions</title>
-<meta name="description" content="Terms for this website and for your use of Ogden, including how it's built with AI assistance and how you connect your own AI provider.">
+<title>Ogden Agents — Terms &amp; Conditions</title>
+<meta name="description" content="Terms for this website and for your use of Ogden Agents, including how it's built with AI assistance, how you connect your own agents, and its MIT license.">
 <meta name="theme-color" content="#0b0d12">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preload" href="fonts/Geist.woff2" as="font" type="font/woff2" crossorigin>
@@ -17,17 +17,17 @@
 
 <header class="site-header">
   <div class="wrap header-inner">
-    <a class="wordmark" href="./" aria-label="Ogden home">
+    <a class="wordmark" href="./" aria-label="Ogden Agents home">
       <span class="wordmark-mark">OG</span><span class="wordmark-text">Ogden</span>
     </a>
     <nav class="nav" aria-label="Primary">
       <a href="./#features">Features</a>
-      <a href="./#deploy">Deploy</a>
-      <a href="./#license">License</a>
+      <a href="./#run">Run it</a>
+      <a href="./#open-source">Open source</a>
       <a href="setup.html">Setup guide</a>
     </nav>
     <div class="header-cta">
-      <a class="btn btn-primary btn-small" href="./#license">Get Ogden</a>
+      <a class="btn btn-primary btn-small" href="https://github.com/hsmith-dev/ogden-agents" target="_blank" rel="noopener">View on GitHub</a>
     </div>
   </div>
 </header>
@@ -37,17 +37,16 @@
   <div class="wrap doc-header">
     <p class="eyebrow">Terms &amp; Conditions</p>
     <h1>Terms &amp; Conditions</h1>
-    <p class="doc-updated">Draft — last updated August 16, 2026</p>
+    <p class="doc-updated">Draft — last updated October 6, 2026</p>
   </div>
 
   <div class="wrap doc-layout">
     <nav class="doc-toc" aria-label="On this page">
       <a href="#acceptance">Acceptance</a>
       <a href="#ai-built">Built with AI assistance</a>
-      <a href="#ai-required">Ogden requires your own AI</a>
+      <a href="#ai-required">Ogden Agents requires your own agents</a>
       <a href="#ai-output">AI-generated output</a>
-      <a href="#license">Your license</a>
-      <a href="#refunds">Refunds</a>
+      <a href="#license">License</a>
       <a href="#warranty">No warranty</a>
       <a href="#liability">Limitation of liability</a>
       <a href="#acceptable-use">Acceptable use</a>
@@ -67,73 +66,55 @@
 
     <h2 id="acceptance">Acceptance</h2>
     <p>
-      By using this website, using Ogden, or purchasing an Ogden license, you agree to these terms and to the
+      By using this website or using Ogden Agents, you agree to these terms and to the
       <a href="privacy.html">Privacy Policy</a>. If you don't agree, don't use the site or the software.
     </p>
 
     <h2 id="ai-built">Built with AI assistance</h2>
     <p>
-      In the interest of being upfront about it: Ogden's own codebase — the application you're
-      licensing — was developed with the assistance of AI software (an AI coding agent, working
-      alongside a human developer). It's been reviewed and tested, but software developed with AI
-      assistance can contain the same kinds of defects any software can. This is disclosed here
-      as a matter of transparency, not as a qualifier on the "as is" terms below, which apply
-      regardless of how the software was written.
+      In the interest of being upfront about it: Ogden Agents' own codebase was developed with the
+      assistance of AI software (an AI coding agent, working alongside a human developer). It's been
+      reviewed and tested, but software developed with AI assistance can contain the same kinds of
+      defects any software can. This is disclosed here as a matter of transparency, not as a
+      qualifier on the "as is" terms below, which apply regardless of how the software was written.
     </p>
 
-    <h2 id="ai-required">Ogden requires your own AI</h2>
+    <h2 id="ai-required">Ogden Agents requires your own agents</h2>
     <p>
-      Ogden is built around connecting to AI — that's its core function — but it does not include,
-      provide, or bundle any AI or LLM service, API key, or usage credit of any kind. You are
-      solely responsible for obtaining, configuring, and paying for your own connection to an AI
-      provider (OpenAI, Anthropic, Google Gemini, a self-hosted Ollama instance, or any
-      OpenAI-compatible endpoint) before Ogden's agents can do anything. See the
-      <a href="setup.html#provider">Setup Guide</a> for how.
+      Ogden Agents is built around connecting to AI coding agents — that's its core function — but
+      it does not include, provide, or bundle any AI or LLM service, API key, or usage credit of any
+      kind. You are solely responsible for obtaining, configuring, and paying for your own sign-in to
+      whichever agents you use: a Claude Code or Antigravity subscription account or API key, an
+      OpenAI API key for Codex, an xAI API access token for Grok, or your own local model server. See
+      the <a href="setup.html#agents">Setup Guide</a> for how.
     </p>
     <p>
-      Your use of any third-party AI provider is governed entirely by that provider's own terms of
-      service, acceptable use policy, and pricing — not by us. We have no control over, and no
-      responsibility for, the availability, accuracy, cost, behavior, or output of any third-party
-      AI provider you choose to connect.
+      Your use of any third-party AI provider or agent is governed entirely by that provider's own
+      terms of service, acceptable use policy, and pricing — not by us. We have no control over, and
+      no responsibility for, the availability, accuracy, cost, behavior, or output of any
+      third-party agent or provider you choose to connect.
     </p>
 
     <h2 id="ai-output">AI-generated output</h2>
     <p>
-      Ogden's personas are AI agents, and the code, text, and decisions they produce are AI
-      generated. Like any AI output, it can be wrong, insecure, inefficient, or simply not what
-      you meant — regardless of which provider or model backs it. <strong>You are solely
+      The agents you connect through Ogden Agents are AI, and the code, text, and decisions they
+      produce are AI generated. Like any AI output, it can be wrong, insecure, inefficient, or simply
+      not what you meant — regardless of which agent or model backs it. <strong>You are solely
       responsible for reviewing, testing, and validating any output before relying on it, merging
-      it, or deploying it.</strong> Ogden includes tooling to help with this (human-in-the-loop
-      approval gates, diff review, automated tests) but using it doesn't substitute for your own
+      it, or deploying it.</strong> Ogden Agents includes tooling to help with this (permission cards,
+      diff review, verification results before merge) but using it doesn't substitute for your own
       judgment.
     </p>
 
-    <h2 id="license">Your license</h2>
+    <h2 id="license">License</h2>
     <p>
-      <strong>Individuals.</strong> If you're using Ogden for yourself (personal, single-user use that
-      isn't on behalf of a company or other organization), it's free. You get the same codebase through
-      an invite to the release repository, and the no-redistribution and no-competing-service terms
-      below still apply.
-    </p>
-    <p>
-      <strong>Organizations.</strong> A company or other organization running Ogden for its own
-      internal use needs a paid self-host license under the terms in <code>LICENSE.txt</code>, which is
-      included in the release repository and is the authoritative license text. In short, the license
-      covers internal use on infrastructure the organization controls, up to the user count of the
-      tier purchased (Small Business: up to 25 / Large Business: up to 1,100 / Enterprise: unlimited).
-      The version delivered is the organization's to keep and run indefinitely. The purchase includes 12 months
-      of new releases and support, renewable afterward at 30% of the original license price, and
-      declining to renew doesn't take away the version already delivered. Repository access may be
-      paused once support lapses, so keep your own clone.
-    </p>
-
-    <h2 id="refunds">Refunds</h2>
-    <p>
-      For organization licenses: because a purchase grants immediate access to the source code and a private
-      repository invite — access that, once used, can't meaningfully be "returned" — <strong>all
-      sales are final</strong> once that access has been granted, except where a refund is required
-      by law. If something's genuinely wrong on our end (a duplicate charge, access never granted,
-      etc.), email us — we'll make it right.
+      Ogden Agents is free and fully open-source software, licensed under the <strong>MIT
+      License</strong>. The <code>LICENSE</code> file in the
+      <a href="https://github.com/hsmith-dev/ogden-agents" target="_blank" rel="noopener">GitHub repository</a>
+      is the authoritative text. In short: you can use, copy, modify, merge, publish, and distribute
+      the software, for personal or commercial purposes, with no seat count, no license key, and
+      nothing to buy, as long as the license notice is kept with any copy you distribute. There is no
+      paid tier and no separate license for organizations.
     </p>
 
     <h2 id="warranty">No warranty</h2>
@@ -146,18 +127,18 @@
     <h2 id="liability">Limitation of liability</h2>
     <p>
       To the maximum extent permitted by law, HarrisonSmith.AI's total liability arising out of or
-      relating to the website, the software, or these terms is limited to the amount you actually
-      paid in the 12 months before the claim, and we are not liable for any indirect, incidental,
-      special, consequential, or punitive damages, including lost profits or data — even if
-      advised of the possibility.
+      relating to the website, the software, or these terms is limited to the amount you paid us for
+      the software, which is zero, and we are not liable for any indirect, incidental, special,
+      consequential, or punitive damages, including lost profits or data — even if advised of the
+      possibility.
     </p>
 
     <h2 id="acceptable-use">Acceptable use</h2>
     <p>
-      You won't use this site or the software for anything unlawful, and you won't resell,
-      sublicense, or redistribute the software or its source code, or use it to offer a
-      substantially similar hosted product to others — see <code>LICENSE.txt</code> for the
-      complete terms governing your specific license.
+      You won't use this site for anything unlawful. The software itself is open source under the
+      MIT License in the repository, which already permits you to use, modify, and redistribute it,
+      including commercially — this section doesn't take any of that back; it only covers your use
+      of this website.
     </p>
 
     <h2 id="law">Governing law</h2>
@@ -194,6 +175,7 @@
     </a>
     <nav class="footer-links" aria-label="Footer">
       <a class="link-muted" href="setup.html">Setup guide</a>
+      <a class="link-muted" href="https://github.com/hsmith-dev/ogden-agents" target="_blank" rel="noopener">GitHub</a>
       <a class="link-muted" href="privacy.html">Privacy</a>
       <a class="link-muted" href="terms.html">Terms</a>
       <a class="link-muted" href="mailto:hello@harrisonsmith.ai">hello@harrisonsmith.ai</a>
