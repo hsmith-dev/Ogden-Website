@@ -18,16 +18,13 @@ fonts/          Geist + Geist Mono variable fonts (SIL OFL 1.1), self-hosted
 
 ## Licensing model shown on the site
 
-- **Individuals**: free for personal, single-user use. "Request access" is a `mailto:` asking for the
-  person's GitHub username, and we invite them to the release repo by hand.
-- **Organizations**: paid self-host license following `LICENSE.txt` in the release repo
-  (`hsmith-dev/ogden-ai-agent-release`): Small Business (≤25 users), Large Business (≤1,100),
-  Enterprise (unlimited). Includes 12 months of releases/support, with optional renewal at 30% of the price paid.
-  Delivery is by private repo invite.
+Ogden Agents is free and open source under the MIT license, for everyone. There are no paid tiers,
+checkout or license keys; the site links straight to `hsmith-dev/ogden-agents` on GitHub.
 
-The organization "Buy license" buttons point at live Stripe Payment Links. If you regenerate them,
-update the three `href`s in the `#license` section of `index.html`. **Only put prices on the
-organization tiers.** Keep the individual tier free of any cost wording.
+## Keeping features current
+
+The features section describes what is in the latest release on GitHub. Work that is merged or in
+progress but not yet released goes only in the "On the way" section (`#next`), labelled as such.
 
 ## Local preview
 
