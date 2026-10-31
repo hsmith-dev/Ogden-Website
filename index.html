@@ -141,14 +141,30 @@
         <article class="tile tile-half" data-reveal>
           <span class="tile-num">05</span>
           <h3>Build tickets safely</h3>
-          <p>Tickets build in their own worktree. Inspect the verification results and approve the merge
-            yourself, or let Claude Code run unattended where a supported sandbox is available.</p>
+          <p>Tickets build in their own worktree with the agent you pick: Claude Code, Codex, Grok or
+            Antigravity. Each one says up front whether it builds on its own or with you watching. Inspect the
+            verification results and approve the merge yourself. A blocked build says why, with Retry or
+            Build again with another agent.</p>
         </article>
         <article class="tile tile-half" data-reveal style="--i:1">
           <span class="tile-num">06</span>
           <h3>Orchestrate</h3>
           <p>Coordinate a manager and worker agents from Orchestrate, with approval per instruction by
             default, recorded activity, and a Stop you can hit any time.</p>
+        </article>
+        <article class="tile tile-half" data-reveal>
+          <span class="tile-num">07</span>
+          <h3>Real terminals, when you want them</h3>
+          <p>Turn on Developer mode for a Terminals tab per project: tabs and splits running a plain shell or
+            the agents' own command line programs. Each terminal shows a best guess of what it's doing and can
+            notify you when it may need you.</p>
+        </article>
+        <article class="tile tile-half" data-reveal style="--i:1">
+          <span class="tile-num">08</span>
+          <h3>Shared tools and skills</h3>
+          <p>Connect MCP servers once in Settings and every coding agent gets them in every project. Keep
+            reusable skills, named instruction snippets, the same way. When one agent runs out of usage,
+            continue the same chat with another from an editable summary.</p>
         </article>
       </div>
     </div>
@@ -170,18 +186,49 @@
 
       <div class="mode-list">
         <div class="mode" data-reveal>
+          <div class="mode-head"><h3>Desktop app</h3><span class="tag">macOS · Windows · Linux</span></div>
+          <p>No Node and no terminal. Download the file for your computer from the
+            <a class="text-link" href="https://github.com/hsmith-dev/ogden-agents/releases/latest" target="_blank" rel="noopener">latest release</a>:
+            a universal <code>.dmg</code> for Mac, an x64 or ARM <code>setup.exe</code> for Windows, and an
+            <code>.AppImage</code> or <code>.deb</code> for Linux. The apps aren't signed yet, so your computer
+            warns the first time; the <a class="text-link" href="setup.html#other-ways">setup guide</a> shows how to open them.</p>
+        </div>
+        <div class="mode" data-reveal style="--i:1">
           <div class="mode-head"><h3>From a checkout</h3><span class="tag">Node 24+ · pnpm</span></div>
           <p>Clone the repo, install, and start it. The app opens in your browser at a one-time launch link.</p>
           <pre class="code-block"><span class="p">$</span> git clone https://github.com/hsmith-dev/ogden-agents.git
 <span class="p">$</span> cd ogden-agents &amp;&amp; pnpm install
 <span class="p">$</span> pnpm start</pre>
         </div>
-        <div class="mode" data-reveal style="--i:1">
-          <div class="mode-head"><h3>Desktop app</h3><span class="tag">macOS · Windows · Linux</span></div>
-          <p>Ogden Agents also ships as a desktop app that needs no Node and no terminal. Prebuilt
-            downloads and no-terminal start scripts land on the <a class="text-link" href="https://github.com/hsmith-dev/ogden-agents/releases" target="_blank" rel="noopener">GitHub Releases page</a> as v1 finishes
-            rolling out — check there for what's currently available.</p>
-        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- On the way -->
+  <section class="section" id="next">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow" data-reveal>On the way</p>
+        <h2 class="section-title" data-reveal>Not in a release yet.</h2>
+        <p class="section-sub" data-reveal>
+          Being built in the open on GitHub. None of this is in a downloadable release yet.
+        </p>
+      </div>
+
+      <div class="bento">
+        <article class="tile tile-half" data-reveal>
+          <span class="tile-num">Next</span>
+          <h3>Agents on your other machines</h3>
+          <p>Run an agent on another computer you own over SSH. Ogden makes a key for each machine and asks
+            you to confirm its host key once. The app itself still only listens on your own computer.</p>
+        </article>
+        <article class="tile tile-half" data-reveal style="--i:1">
+          <span class="tile-num">Next</span>
+          <h3>Bring your own agent</h3>
+          <p>Add any agent that speaks the Agent Client Protocol by its command, including one you wrote
+            yourself, and chat with it like the built-in ones. Every tool call asks you first. The Local model
+            can build tickets with you watching.</p>
+        </article>
       </div>
     </div>
   </section>

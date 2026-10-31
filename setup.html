@@ -60,7 +60,8 @@
         <div>
           <h3>Prerequisites</h3>
           <p>
-            <a href="https://nodejs.org/en/download">Node.js 24 or later</a> and <code>pnpm</code>, plus at
+            To run from a checkout, <a href="https://nodejs.org/en/download">Node.js 24 or later</a> and
+            <code>pnpm</code> (the <a href="#other-ways">desktop app</a> needs neither). Either way, at
             least one agent you can sign in to: a Claude Code or Antigravity subscription account, an
             OpenAI API key for Codex, an xAI API access token for Grok, or a local model server you already
             run. Ogden Agents can install most of these for you from Settings &gt; Agents.
@@ -132,11 +133,22 @@ pnpm start</code></div>
         <div>
           <h3>Desktop app &amp; other ways to run it</h3>
           <p>
-            Prefer no terminal at all? Ogden Agents also ships as a desktop app for macOS, Windows, and
-            Linux, and as double-click start scripts that fetch the app for you. These roll out alongside
-            the v1 release — see the <a href="https://github.com/hsmith-dev/ogden-agents/releases" target="_blank" rel="noopener">Releases page</a>
-            for what's currently available, and the <a href="https://github.com/hsmith-dev/ogden-agents#readme" target="_blank" rel="noopener">README</a>
-            for the exact, up-to-date steps for every platform.
+            Prefer no terminal at all? Download the desktop app for your computer from the
+            <a href="https://github.com/hsmith-dev/ogden-agents/releases/latest" target="_blank" rel="noopener">latest release</a>.
+            It needs no Node and no terminal, and shares the same data and projects as a checkout.
+          </p>
+          <ul>
+            <li><strong>Mac</strong> (Apple silicon or Intel): <code>_universal.dmg</code>, macOS 13.5 or later.</li>
+            <li><strong>Windows</strong>: <code>_x64-setup.exe</code> for most PCs, <code>_arm64-setup.exe</code> for Windows on ARM. No administrator rights needed.</li>
+            <li><strong>Linux</strong>: <code>.AppImage</code> (x64 or aarch64), or a <code>.deb</code>.</li>
+          </ul>
+          <p>
+            The apps aren't signed yet, so the first open shows a warning. On macOS, click Done, then open
+            System Settings, Privacy &amp; Security, and click <strong>Open Anyway</strong>. On Windows, click
+            <strong>More info</strong>, then <strong>Run anyway</strong>. On Linux, make the AppImage executable
+            and double-click it. Each release has <code>SHA256SUMS-desktop.txt</code> to check your download. The
+            <a href="https://github.com/hsmith-dev/ogden-agents#download" target="_blank" rel="noopener">README</a>
+            has the full steps for every platform.
           </p>
         </div>
       </div>
